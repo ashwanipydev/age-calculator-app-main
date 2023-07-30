@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --ff: 'Poppins', sans-serif;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Off-white);
+    font-family: var(--ff);
+}
+
+.container {
+  background-color: var(--White);
+  width: 80%;
+  max-width: 450PX;
+  padding: 30px;
+  position: relative;
+  border-bottom-right-radius: 150px;
+  box-shadow: 3px 5px 9px rgba(0,0,0,.6);
+}
+
+.label__input{
+    font-weight: 500;
+    color: var(--Light-red);
+    
+}
+
+input {
+  width: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--Off-white);
+  /* border: none; */
+  outline: none;
+  color: var(--Light-red);
+  font-weight: 900;
+  
+}
+input:focus {
+  border: 2px solid var(--Purple);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+small {
+  color: red;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.submit-btn {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  background-color: var(--Purple);
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: black;
+}
+.output h1{
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.output span {
+  font-size: 2.75rem;
+  color: var(--Purple);
+  font-style: italic;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.input-flex {
+  display: flex;
+  border-bottom: 2px solid var(--Off-white);
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  input {
+    width: 80%;
+  }
+  .output span {
+    font-size: 1.75rem;
+  }
+  .submit-btn {
+    width: 40px;
+    height: 40px;
+    right: 40%;
+    top: 90px;
+  }
+  .submit-btn img {
+    transform: scale(0.5);
+  }
+}
